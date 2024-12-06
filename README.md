@@ -14,9 +14,8 @@ This repository contains an implementation of `strace` functionality in the xv6 
 5.  **`kernel/trap.h`**: Global variable definitions.
 6. **`Makefile`**: Updated to include new dependencies for the custom tracing functionality.
 7. **`straceTest.c`**: Trace child process implementation.
-8. **`memleak2.c`**: Application of memory leak in xv6. 
-
-
+8. **`memleak.c`**: Application of memory leak in xv6. 
+9. **`memoryleak.c`**: Application of memory leak into file memleakfile.txt.
 ---
 
 ## How to Run the Program
@@ -47,3 +46,17 @@ OR
 make clean && make xv6.img && make qemu
 ```
 
+### How to run strace commands
+```bash
+strace on
+strace off
+strace dump
+strace run echo hello
+./straceTest
+strace -e echo hello
+strace -s
+strace -f
+strace -s -e write
+strace -f -e write
+./memleak
+```
